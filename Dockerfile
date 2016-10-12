@@ -31,6 +31,9 @@ ENV LC_ALL en_US.UTF-8
 RUN mix local.hex
 RUN mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
 
+RUN npm install -g elm
+
 CMD elixir --version && mix --version && iex --version && npm --version && node --version
 
 WORKDIR /appli/
+
